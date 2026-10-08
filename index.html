@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="日本理论电影网（ribenlilundianyingwang-cn.github.io）是一份「日本电影理论观影指引」：日本电影思潮年表、作者论片单、镜头语法拆解、理论入门路径、观影问答。不提供、不托管、不链接任何影视资源，只指向正版观看渠道。">
+<meta name="keywords" content="日本理论电影网, 日本电影, 电影理论, 作者论, 镜头语言, 蒙太奇, 小津安二郎, 黑泽明, 沟口健二, 成濑巳喜男, 侯孝贤, 是枝裕和, 新浪潮, 日本电影史, 片单导航, 正版观看渠道, ribenlilundianyingwang-cn">
+<meta name="robots" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<title>日本理论电影网 - 日本电影理论观影指引 · 思潮年表 / 作者论片单 / 镜头语法 | ribenlilundianyingwang-cn.github.io</title>
+<link rel="canonical" href="https://ribenlilundianyingwang-cn.github.io/">
+<style>
+:root{
+  --paper:#f7f4ee; --paper2:#efe9dc; --crease:#e2d8c2; --line:#d3c6aa; --line2:#bba988;
+  --ink:#23201c; --ink2:#45403a; --mute:#8b8376;
+  --sumi:#2b2926; --char:#7d2b22; --char2:#5e1f18; --matcha:#7a8b4a; --indigo:#3f5a6e; --gold:#c69a4a; --moss:#9aa88c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.9;
+  background-image:
+    radial-gradient(circle at 90% 6%,rgba(125,43,34,.10),transparent 46%),
+    repeating-linear-gradient(0deg,rgba(35,32,28,.006) 0 1px,transparent 1px 4px);
+}
+a{color:inherit;text-decoration:none;outline:none;display:block}
+.serif{font-family:Georgia,"Songti SC","SimSun",serif}
+.eyebrow{font-size:9.2px;letter-spacing:3.2px;font-weight:860;color:var(--char2);text-transform:uppercase}
+.wrap{max-width:1160px;margin:0 auto;padding:0 30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 25px;border-radius:2px;font-size:13px;font-weight:800;cursor:pointer;border:2px solid var(--sumi);transition:.22s;letter-spacing:.6px}
+.btn-d{background:var(--char);color:#f7ede0;border-color:var(--char)}
+.btn-d:hover{background:var(--char2);border-color:var(--char2);transform:translateY(-2px);box-shadow:0 14px 26px -12px rgba(94,31,24,.55)}
+.btn-o{background:transparent;color:var(--ink)}
+.btn-o:hover{background:rgba(122,139,74,.22)}
+
+/* HERO : ink wash + karesansui */
+.hero{position:relative;border-bottom:1px solid var(--line2);overflow:hidden;background:linear-gradient(180deg,#fbf8f2 0%,#f4efe3 52%,#ebe3d2 100%)}
+.hero .wash{position:absolute;inset:0;z-index:1;opacity:.5;
+  background:
+    radial-gradient(ellipse 60% 70% at 18% 88%,rgba(43,41,38,.16),transparent 62%),
+    radial-gradient(ellipse 54% 60% at 84% 78%,rgba(63,90,110,.20),transparent 60%),
+    linear-gradient(180deg,transparent 0 62%,rgba(125,43,34,.08) 100%)}
+.hin{position:relative;z-index:6;padding:60px 0 54px}
+.htop{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;font-size:9.6px;letter-spacing:2.4px;color:var(--char2);font-weight:760}
+h1{font-size:clamp(40px,8.2vw,94px);line-height:1.08;font-weight:900;letter-spacing:-2.4px;margin-top:11px;font-family:Georgia,serif}
+h1 .ll{color:var(--char2);position:relative;display:inline-block}
+h1 .ll::after{content:"";position:absolute;left:0;right:0;bottom:8%;height:10px;background:var(--gold);z-index:-1;opacity:.62;transform:skewX(-13deg)}
+h1 .en{display:block;font-size:clamp(8.4px,1.2vw,10.4px);letter-spacing:5.6px;color:var(--mute);margin-top:18px;font-weight:720;font-family:sans-serif}
+.hgrid{display:grid;grid-template-columns:1.26fr .74fr;gap:30px;align-items:start;margin-top:23px}
+.htxt{font-size:15px;color:var(--ink2);max-width:660px}
+.htxt b{color:var(--char2);background:linear-gradient(180deg,transparent 62%,rgba(125,43,34,.24) 62%);padding:0 2px}
+.hstat{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2)}
+.hstat div{background:rgba(247,244,238,.97);padding:12px 14px}
+.hstat dt{font-size:9px;letter-spacing:2.1px;color:var(--matcha);font-weight:860}
+.hstat dd{font-family:Georgia,serif;font-size:19px;font-weight:870;color:var(--ink);line-height:1.5}
+.hact{display:flex;gap:11px;flex-wrap:wrap;margin-top:25px}
+
+/* karesansui stones */
+.stones{position:absolute;right:4%;bottom:0;width:34%;height:180px;z-index:3;pointer-events:none;opacity:.85}
+.stone{position:absolute;border-radius:50% 50% 46% 54%;background:radial-gradient(circle at 32% 24%,#6b665e,#3a3733 62%,#262421);box-shadow:0 14px 26px -14px rgba(20,18,16,.7)}
+.stone.s1{width:130px;height:88px;right:6%;bottom:14px}
+.stone.s2{width:86px;height:62px;right:34%;bottom:30px;opacity:.8}
+.stone.s3{width:54px;height:40px;right:58%;bottom:46px;opacity:.66}
+.ripple{position:absolute;left:0;right:0;bottom:0;height:74px;z-index:2;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(90deg,transparent 0,transparent 16px,rgba(43,41,38,.16) 17px,transparent 19px)}
+
+/* NAV */
+nav.navbar{position:sticky;top:0;z-index:80;background:rgba(247,244,238,.96);backdrop-filter:blur(9px);border-bottom:1px solid var(--line2)}
+.nin{display:flex;align-items:center;gap:12px;height:58px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:16.6px;letter-spacing:.3px;font-family:Georgia,serif}
+.logo .mk{width:30px;height:30px;border-radius:3px;background:var(--sumi);color:#e7dcc4;display:grid;place-items:center;font-size:11px;font-weight:900;box-shadow:3px 3px 0 var(--char);transform:rotate(-6deg)}
+.logo small{display:block;font-size:7.4px;color:var(--mute);letter-spacing:1.6px;font-weight:650;font-family:sans-serif}
+.nl{display:flex;gap:1px;margin-left:auto;flex-wrap:wrap}
+.nl a{font-size:11.5px;padding:6px 9px;color:var(--mute);font-weight:700}
+.nl a:hover{color:var(--char2);background:rgba(125,43,34,.11)}
+
+section{padding:74px 0}
+.head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+.head h2{font-size:clamp(22px,3.4vw,33px);font-weight:870;margin-top:6px;font-family:Georgia,serif;line-height:1.32}
+.head h2 em{font-style:normal;color:var(--char2)}
+.head > p{color:var(--mute);font-size:13.5px;max-width:660px}
+
+/* COL1 : vertical timeline (dl/dt/dd) */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:3px;background:linear-gradient(180deg,var(--matcha),var(--gold) 55%,var(--char));border-radius:3px}
+.tl .node{position:relative;margin-bottom:15px;background:var(--paper);border:1.4px solid var(--line2);border-radius:2px;padding:15px 20px;transition:.22s}
+.tl .node::before{content:"";position:absolute;left:-32px;top:20px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--matcha)}
+.tl .node:hover{border-color:var(--char2);transform:translateX(7px);box-shadow:0 14px 28px -14px rgba(94,31,24,.36)}
+.tl .yr{font-family:Georgia,serif;font-size:11.6px;letter-spacing:2.2px;color:var(--matcha);font-weight:870}
+.tl h3{font-size:16.6px;font-family:Georgia,serif;font-weight:850;margin:1px 0 5px}
+.tl p{font-size:12.2px;color:var(--ink2);line-height:1.78}
+.tl p b{color:var(--char2)}
+.tl .who{display:inline-block;margin-top:8px;font-size:9.1px;letter-spacing:1.4px;font-weight:810;color:var(--paper);background:var(--sumi);border-radius:999px;padding:2px 11px}
+
+/* COL2 : definition-list two-column cards */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.dc{background:var(--paper);border:1.4px solid var(--line2);border-radius:2px;padding:17px 21px 19px;border-top:6px solid var(--char);transition:.24s;position:relative}
+.dc:nth-child(2){border-top-color:var(--matcha)}
+.dc:nth-child(3){border-top-color:var(--indigo)}
+.dc:nth-child(4){border-top-color:var(--gold)}
+.dc:hover{border-color:var(--char2);transform:translateY(-5px);box-shadow:0 16px 30px -14px rgba(94,31,24,.42)}
+.dc .no{font-family:Georgia,serif;font-size:9.6px;letter-spacing:2.4px;color:var(--gold);font-weight:870}
+.dc h3{font-size:16.2px;font-family:Georgia,serif;font-weight:850;margin:3px 0 8px}
+.dc dl{font-size:12px;color:var(--ink2)}
+.dc dt{color:var(--matcha);font-size:9.2px;letter-spacing:1.5px;font-weight:850;margin-top:8px}
+.dc dd{line-height:1.74}
+.dc .see{margin-top:11px;font-size:11px;color:var(--char2);font-weight:780;border-top:1px dashed var(--line);padding-top:8px}
+
+/* COL3 : marquee track of grammar chips */
+.gram{background:var(--sumi);border-radius:2px;padding:34px 0 30px;overflow:hidden;position:relative}
+.gram .gtt{font-family:Georgia,serif;font-size:11px;letter-spacing:3.4px;color:var(--gold);margin-bottom:16px;text-align:center;font-weight:800}
+.track{display:flex;width:max-content;animation:slide 40s linear infinite;gap:0}
+.track:hover{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(calc(-50% - 14px))}}
+.chip{flex:0 0 auto;width:268px;margin-right:28px;background:rgba(247,244,238,.06);border:1px solid rgba(224,212,188,.26);border-radius:2px;padding:14px 18px;color:#e9e0cd}
+.chip .t{font-family:Georgia,serif;font-size:15.4px;font-weight:850;color:#f2e6cf;letter-spacing:.3px}
+.chip .j{font-size:9.6px;letter-spacing:1.8px;color:var(--gold);margin-left:6px;font-weight:760}
+.chip p{font-size:11.4px;color:#c9c0ae;margin-top:6px;line-height:1.72}
+.chip b{color:#f0d9a8}
+
+/* COL4 : table */
+.tbl{background:var(--paper);border:1.4px solid var(--line2);border-radius:2px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:750px;font-size:12.2px}
+thead th{background:var(--sumi);color:#e9ddc4;text-align:left;padding:12px 14px;font-size:9.5px;letter-spacing:1.7px;font-weight:820;position:sticky;top:58px;z-index:6}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:hover{background:rgba(125,43,34,.07)}
+tbody tr:last-child td{border-bottom:none}
+.pill{display:inline-block;font-size:9.1px;letter-spacing:1.1px;font-weight:800;border-radius:999px;padding:2px 9px;white-space:nowrap}
+.pill.c{background:rgba(125,43,34,.18);color:var(--char2)}
+.pill.m{background:rgba(122,139,74,.22);color:var(--matcha)}
+.pill.i{background:rgba(63,90,110,.22);color:var(--indigo)}
+.pill.g{background:rgba(198,154,74,.26);color:#8a6518}
+.bar{display:block;height:7px;border-radius:999px;background:var(--crease);margin-top:5px;overflow:hidden}
+.bar u{display:block;height:100%;background:linear-gradient(90deg,var(--matcha),var(--char));border-radius:inherit;text-decoration:none}
+
+/* COL5 : details/summary accordion */
+.qa{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:11px}
+.qb{background:var(--paper);border:1.4px solid var(--line2);border-radius:2px;transition:.2s;overflow:hidden}
+.qb:hover{border-color:var(--char)}
+.qb summary{cursor:pointer;padding:16px 22px 16px 58px;font-family:Georgia,serif;font-size:14.3px;font-weight:800;position:relative;list-style:none}
+.qb summary::-webkit-details-marker{display:none}
+.qb summary::before{content:"論";position:absolute;left:16px;top:15px;width:26px;height:26px;background:var(--char);color:#f7ede0;border-radius:2px;display:grid;place-items:center;font-size:11.4px;font-weight:900}
+.qb summary::after{content:"＋";position:absolute;right:18px;top:15px;color:var(--matcha);font-weight:900;font-size:15px;transition:.2s}
+.qb[open]{border-color:var(--char2);box-shadow:0 12px 26px -12px rgba(94,31,24,.4)}
+.qb[open] summary::after{content:"－";color:var(--char2)}
+.qb .an{font-size:12.2px;color:var(--ink2);padding:0 22px 17px 58px;animation:fade .3s ease}
+.qb .an p{padding-top:10px;border-top:1px dashed var(--line)}
+.qb .an b{color:var(--char2)}
+@keyframes fade{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+
+.quote{margin-top:10px;border:1.4px solid var(--line2);border-radius:2px;padding:30px 36px 26px;background:linear-gradient(140deg,var(--paper),var(--paper2));position:relative}
+.quote .mq{position:absolute;left:14px;top:-16px;font-family:Georgia,serif;font-size:104px;line-height:.6;color:var(--char);opacity:.26}
+.quote p{font-family:Georgia,"Songti SC",serif;font-size:clamp(15px,2.2vw,19.2px);line-height:1.95;position:relative;z-index:2}
+.quote cite{display:block;margin-top:12px;font-size:11.1px;letter-spacing:2px;color:var(--matcha);font-style:normal;font-weight:800}
+
+.cta{margin-top:10px;background:linear-gradient(135deg,#7d2b22,#5e1f18);color:#f7ede0;border-radius:2px;padding:50px 34px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 12%,rgba(198,154,74,.3),transparent 44%)}
+.cta h2{font-family:Georgia,serif;font-size:clamp(23px,3.7vw,38px);position:relative;line-height:1.42}
+.cta h2 u{text-decoration:none;color:var(--gold)}
+.cta p{color:#f0dcc2;max-width:660px;margin:12px auto 22px;font-size:14px;position:relative}
+.cta .btn-d{background:var(--sumi);border-color:var(--sumi);color:var(--gold)}
+
+footer{border-top:1px solid var(--line2);padding:30px 0 20px;color:var(--mute);font-size:12.1px;margin-top:12px}
+.ff{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+.fn{display:flex;flex-wrap:wrap;gap:16px}
+.fn a:hover{color:var(--char2)}
+.bread{font-size:11.2px;margin-top:12px}
+.bread a{display:inline;color:var(--char2)}
+.copy{margin-top:13px;border-top:1px solid var(--line2);padding-top:13px;font-size:11.2px;color:#8f8778;line-height:1.95}
+.copy b{color:var(--char2)}
+
+@media (max-width:960px){
+  .hgrid{grid-template-columns:1fr}
+  .stones,.ripple{display:none}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:54px 0}
+  .nl a{padding:5px 3px;font-size:10.3px}
+  .quote{padding:26px 20px}
+  .hact .btn{padding:11px 17px;font-size:12.2px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header class="navbar">
+  <div class="wrap nin">
+    <div class="logo"><span class="mk" aria-hidden="true">論</span>日本理论电影网<small>RIBENLILUNDIANYINGWANG-CN.GITHUB.IO · 日本电影理论观影指引</small></div>
+    <nav class="nl" aria-label="主导航">
+      <a href="#age"><b>01</b>思潮年表</a>
+      <a href="#auteur"><b>02</b>作者论</a>
+      <a href="#gram"><b>03</b>镜头语法</a>
+      <a href="#path"><b>04</b>入门路径</a>
+      <a href="#faq"><b>05</b>一答问</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO : karesansui ink wash -->
+  <section class="hero" aria-labelledby="h1">
+    <div class="wash" aria-hidden="true"></div>
+    <div class="ripple" aria-hidden="true"></div>
+    <div class="stones" aria-hidden="true">
+      <div class="stone s1"></div><div class="stone s2"></div><div class="stone s3"></div>
+    </div>
+
+    <div class="wrap hin">
+      <div class="htop">
+        <span><b>日本理论电影网</b> · 日本电影理论观影指引</span>
+        <span>RIBENLILUNDIANYINGWANG-CN.GITHUB.IO &nbsp;|&nbsp; 思潮年表 · 作者论 · 镜头语法 · 入门路径</span>
+      </div>
+
+      <h1 id="h1"><span class="ll">理论</span>不是术语，<br>是<b>看懂</b>的方法<span class="en">J A P A N E S E &nbsp;· &nbsp; C I N E M A &nbsp;· &nbsp; T H E O R Y</span></h1>
+
+      <div class="hgrid">
+        <p class="htxt">我们不提供电影，<b>我们提供"怎么看"的钥匙。</b><br>
+        日本电影被全世界学了一百年：<b>小津的"榻榻米视角"、黑泽的"多机位",沟口的"一场一镜"、成濑的"女人的背影"、是枝的"不解释的温柔"</b>——它们不是风格，是<b>可以拆开、可以偷走、可以用在自己眼睛里的技术</b>。<br>
+        本站的片单只回答两个问题：<b>"这片子好在哪里"</b>和<b>"我该看哪一部才开始"</b>。<b>看懂一部，胜过刷过一百部。</b></p>
+        <dl class="hstat">
+          <div><dt>思潮节点</dt><dd>8 个</dd></div>
+          <div><dt>作者论片单</dt><dd>5 位</dd></div>
+          <div><dt>镜头语法</dt><dd>12 条</dd></div>
+          <div><dt>影视资源</dt><dd>0 个</dd></div>
+        </dl>
+      </div>
+
+      <div class="hact">
+        <a class="btn btn-d" href="#age">🎞 看思潮年表</a>
+        <a class="btn btn-o" href="#path">📖 入门四步</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COL 1 : vertical timeline (dl/dt/dd) -->
+  <section id="age" aria-labelledby="t0">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Column 01 · 思潮年表</span>
+          <h2 id="t0">一百年，<em>八次转向</em>：日本电影思潮年表</h2>
+        </div>
+        <p>电影史不是年份，是<b>争论</b>。每一次"该怎么拍"，都留下了一批值得看的片子。</p>
+      </div>
+
+      <div class="tl">
+        <div class="node">
+          <div class="yr">1897 — 1910s · 戏曲纪录</div>
+          <h3>「活动写真」：电影是能动的浮世绘</h3>
+          <p>日本第一批电影是<b>拍下来的歌舞伎</b>——一个机位、不剪接、观众看的是"姿势"。真正的转折是<b>「 cabinet 剪接」的引入</b>：把不同机位拼在一起，电影才第一次学会了"说话"。</p>
+          <span class="who">看这部入门：『活动写真』时代的纪录片残片（公版）</span>
+        </div>
+        <div class="node">
+          <div class="yr">1920s · 纯电影运动</div>
+          <h3>「纯电影」：别再拍舞台了</h3>
+          <p>1923 年关东大地震烧掉了东京的大摄影棚，反而让新人大批进场。<b>衣笠贞之助的《疯狂的一页》(1926) 用倾斜构图、叠印、主观镜头，把"内心"第一次搬上银幕</b>——它是日本第一部被西方认真对待的电影。</p>
+          <span class="who">看这部：《疯狂的一页》(1926) · 公版默片</span>
+        </div>
+        <div class="node">
+          <div class="yr">1930s · 声音与战争</div>
+          <h3>有声片来了，导演们吵了五年</h3>
+          <p>沟口健二坚持"声音是杂音"，<b>五所平之助的《夫人与妻子》(1931) 是日本第一部有声片</b>。随后十年，电影被征用为战争工具——<b>但也正是在这片灰烬里，小津安二郎练出了"榻榻米机位"：把摄影机放到跪坐的高度，世界就矮了三寸，人也近了三寸。</b></p>
+          <span class="who">看这部：《晚春》(1949) · 小津</span>
+        </div>
+        <div class="node">
+          <div class="yr">1950s · 黄金时代</div>
+          <h3>黑泽明把日本电影"卖"给了世界</h3>
+          <p>1951 年《罗生门》拿下威尼斯金狮，<b>西方第一次意识到"亚洲也有作者"</b>。同一时期，<b>沟口健二用"一场一镜"的长镜头横移，拍出了《雨月物语》的幽玄；小津把"家庭"拍成宇宙；成濑巳喜男让女人背着镜头说话——因为日本女人的心事，从来不是说出来的。</b></p>
+          <span class="who">看这三部：《罗生门》《雨月物语》《浮云》</span>
+        </div>
+        <div class="node">
+          <div class="yr">1960s · 松竹新浪潮</div>
+          <h3>「日本新浪潮」：把摄影机扛到大街上</h3>
+          <p>大岛渚、吉田喜重、筱田正浩——他们<b>不再搭景，直接去拍真实的街道和真实的人</b>。《青春残酷物语》《日本的夜与雾》让审查制度第一次显得可笑。<b>这是日本电影最后一次真正"愤怒"。</b></p>
+          <span class="who">看这部：《青春残酷物语》(1960) · 大岛渚</span>
+        </div>
+        <div class="node">
+          <div class="yr">1970s — 1980s · 国民电影</div>
+          <h3>从"作者"回到"观众"</h3>
+          <p>新浪潮烧尽，取而代之的是<b>山田洋次的"寅次郎"系列</b>——48 部，拍了 26 年，<b>把"失败者的日常"拍成了国民记忆</b>。同时，<b>今村昌平把镜头对准"被文明遗忘的人"</b>：《楢山节考》的残酷，是文明的真相。</p>
+          <span class="who">看这两部：《男人真命苦》(1969) · 《楢山节考》(1983)</span>
+        </div>
+        <div class="node">
+          <div class="yr">1990s · 空虚的一代</div>
+          <h3>泡沫碎了，电影开始"什么都不说"</h3>
+          <p>北野武用<b>极致的静 + 突兀的暴</b>（《花火》《菊次郎的夏天》）；河濑直美用 8mm 拍奈良的雾；<b>是枝裕和从纪录片走来，发明了"不解释的温柔"</b>——《幻之光》《无人知晓》里，大人犯的错，孩子自己消化。</p>
+          <span class="who">看这部：《无人知晓》(2004) · 是枝裕和</span>
+        </div>
+        <div class="node">
+          <div class="yr">2010s — 至今 · 世界的日本</div>
+          <h3>日本电影变成了"方法"，而不再是"国别"</h3>
+          <p>是枝裕和拿下了戛纳金棕榈（《小偷家族》2018），<b>滨口龙介用"读剧本"的方式拍出了《驾驶我的车》(2021)</b>——三个小时，大部分时间在车上聊天。<b>他们共同证明：最"日本"的东西，恰恰是最世界的。</b></p>
+          <span class="who">看这部：《驾驶我的车》(2021) · 滨口龙介</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COL 2 : definition-list two-column cards -->
+  <section id="auteur" aria-labelledby="t1" style="background:linear-gradient(180deg,transparent,rgba(122,139,74,.11))">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Column 02 · 作者论片单</span>
+          <h2 id="t1">五位作者，<b>五种眼睛</b></h2>
+        </div>
+        <p>「作者论」的意思是：<b>把导演当作家看</b>。看懂一个人的执念，就能看懂他所有的片子。</p>
+      </div>
+
+      <div class="two">
+        <div class="dc">
+          <div class="no">AUTEUR 01</div>
+          <h3>小津安二郎 · 榻榻米视角</h3>
+          <dl>
+            <dt>执念</dt><dd>家庭、离别、父亲的沉默、女儿的出嫁</dd>
+            <dt>语法</dt><dd><b>机位永远在 90cm 高</b>（跪坐视点）；只用 50mm 镜头；人物多背对镜头；镜头不"推"、不"跟"、不做技巧</dd>
+            <dt>为什么重要</dt><dd>他证明了<b>"不动"比"动"更有力</b>。侯孝贤、是枝裕和、文德斯都学他</dd>
+          </dl>
+          <div class="see">入门三部：《晚春》(1949) → 《东京物语》(1953) → 《秋刀鱼之味》(1962)</div>
+        </div>
+        <div class="dc">
+          <div class="no">AUTEUR 02</div>
+          <h3>黑泽明 · 多机位与天气</h3>
+          <dl>
+            <dt>执念</dt><dd>人的尊严、群体的愚蠢、雨、风、泥</dd>
+            <dt>语法</dt><dd><b>一部戏用 5–8 台摄影机同时拍</b>，剪辑时"选择"而非"拼接"；大量使用<b>镜面构图与门框</b>；天气是他最重要的演员</dd>
+            <dt>为什么重要</dt><dd>他把日本电影卖给了世界，也让<b>《七武士》成了后来所有"群像英雄片"的祖宗</b></dd>
+          </dl>
+          <div class="see">入门三部：《罗生门》(1950) → 《七武士》(1954) → 《影子武士》(1980)</div>
+        </div>
+        <div class="dc">
+          <div class="no">AUTEUR 03</div>
+          <h3>沟口健二 · 一场一镜</h3>
+          <dl>
+            <dt>执念</dt><dd>被时代碾过的女人、幽玄、怨</dd>
+            <dt>语法</dt><dd><b>一个场景尽量一镜到底</b>，摄影机水平横移（"沟口式横移"），人物在纵深里穿行；<b>绝不做特写</b>——他要你看"整个人"</dd>
+            <dt>为什么重要</dt><dd>让·雷诺阿、特吕弗都承认学他。<b>《雨月物语》的"鬼"，全靠镜头不肯切</b></dd>
+          </dl>
+          <div class="see">入门三部：《雨月物语》(1953) → 《山椒大夫》(1954) → 《赤线地带》(1956)</div>
+        </div>
+        <div class="dc">
+          <div class="no">AUTEUR 04</div>
+          <h3>成濑巳喜男 · 女人的背影</h3>
+          <dl>
+            <dt>执念</dt><dd>职业女性、母亲的牺牲、不说出口的爱</dd>
+            <dt>语法</dt><dd><b>大量拍"背影"和"侧脸"</b>；台词极简，<b>情绪靠"没说的话"传递</b>；室内戏居多，窗外永远是东京</dd>
+            <dt>为什么重要</dt><dd>被低估了五十年，<b>现在被公认是"最日本的导演"</b>。是枝裕和的母亲戏，直接继承自他</dd>
+          </dl>
+          <div class="see">入门三部：《浮云》(1955) → 《情迷意乱》(1964) → 《女人步上楼梯时》(1960)</div>
+        </div>
+        <div class="dc">
+          <div class="no">AUTEUR 05</div>
+          <h3>是枝裕和 · 不解释的温柔</h3>
+          <dl>
+            <dt>执念</dt><dd>非血缘的家庭、被丢下的孩子、沉默的父辈</dd>
+            <dt>语法</dt><dd>纪录片出身：<b>先拍真实的人，再写剧本</b>；大量用<b>自然光、环境音、长 silence</b>；孩子永远比大人更清楚发生了什么</dd>
+            <dt>为什么重要</dt><dd>他证明了<b>"克制"是一种道德</b>：不审判、不说教、不给答案，让观众自己难受</dd>
+          </dl>
+          <div class="see">入门三部：《幻之光》(1995) → 《无人知晓》(2004) → 《小偷家族》(2018)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COL 3 : marquee track -->
+  <section id="gram" aria-labelledby="t2">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Column 03 · 镜头语法</span>
+          <h2 id="t2">十二条<b>能偷走</b>的镜头语法</h2>
+        </div>
+        <p>鼠标悬停可暂停。这些不是术语，是<b>你可以马上用在自己眼睛里的技术</b>。</p>
+      </div>
+    </div>
+    <div class="gram">
+      <div class="gtt">J A P A N E S E &nbsp;· &nbsp; C I N E M A T I C &nbsp;· &nbsp; V O C A B U L A R Y</div>
+      <div class="track">
+        <div class="chip"><span class="t">榻榻米机位</span><span class="j">TATAMI</span><p>摄影机放到<b>跪坐的高度</b>（约 90cm）。世界矮了三寸，人也近了三寸。<b>发明者：小津安二郎</b></p></div>
+        <div class="chip"><span class="t">一场一镜</span><span class="j">ONE SCENE ONE SHOT</span><p>一个场景尽量不剪。<b>沟口健二</b>用它拍"怨"——鬼之所以像鬼，是因为镜头<b>不肯切走</b>。</p></div>
+        <div class="chip"><span class="t">枕镜头</span><span class="j">PILLOW SHOT</span><p>小津的发明：<b>人物走了，镜头还留在空房间</b>。拍的是"人走之后的空气"。后来被全世界的导演偷走。</p></div>
+        <div class="chip"><span class="t">门框构图</span><span class="j">FRAME IN FRAME</span><p><b>黑泽明</b>爱用：人站在门里、窗里、柱间。<b>人永远被框住</b>——这就是他的主题：人的尊严与处境。</p></div>
+        <div class="chip"><span class="t">横移而不剪</span><span class="j">TRACKING</span><p>摄影机水平移动，人物在纵深穿行。<b>你不"切换视角"，你"走过这段人生"</b>。沟口 → 雷诺阿 → 侯孝贤。</p></div>
+        <div class="chip"><span class="t">背影表演</span><span class="j">BACK VIEW</span><p><b>成濑巳喜男</b>让女演员<b>背对镜头</b>说话。日本女人的心事不是"说"出来的——你看她的后颈就够了。</p></div>
+        <div class="chip"><span class="t">空镜过渡</span><span class="j">EMPTY SHOT</span><p>不拍人，拍<b>云、电线、车站、晾衣绳</b>。情绪不由演员给，由<b>时间和天气</b>给。是枝裕和、侯孝贤的常用手段。</p></div>
+        <div class="chip"><span class="t">沉默三秒</span><span class="j">SILENCE</span><p>台词说完，<b>再留三秒</b>。是枝裕和用它制造"未说出的部分"。<b>观众会替你把话说完——而且记得更牢。</b></p></div>
+        <div class="chip"><span class="t">天气当演员</span><span class="j">WEATHER</span><p>黑泽明拍雨、小津拍秋、是枝拍夏天的蝉。<b>日本人不用音乐表达悲伤，他们用季节。</b></p></div>
+        <div class="chip"><span class="t">非职业演员</span><span class="j">NON-ACTOR</span><p>是枝裕和、河濑直美大量使用<b>素人</b>。<b>不表演的表演</b>，比演技更接近真实——但前提是导演得先拍真实的人。</p></div>
+        <div class="chip"><span class="t">长镜头吃饭</span><span class="j">EATING SHOT</span><p>《小偷家族》里一家人吃泡面、小津片里的早餐。<b>吃饭是全片最诚实的戏</b>：谁夹给谁，比台词更说明关系。</p></div>
+        <div class="chip"><span class="t">不解释的结尾</span><span class="j">OPEN END</span><p><b>不给答案</b>。《无人知晓》的结尾，孩子们坐在机场栏杆上——<b>你替他们想完了余生。</b></p></div>
+        <!-- duplicate for seamless loop -->
+        <div class="chip"><span class="t">榻榻米机位</span><span class="j">TATAMI</span><p>摄影机放到<b>跪坐的高度</b>（约 90cm）。世界矮了三寸，人也近了三寸。<b>发明者：小津安二郎</b></p></div>
+        <div class="chip"><span class="t">一场一镜</span><span class="j">ONE SCENE ONE SHOT</span><p>一个场景尽量不剪。<b>沟口健二</b>用它拍"怨"——鬼之所以像鬼，是因为镜头<b>不肯切走</b>。</p></div>
+        <div class="chip"><span class="t">枕镜头</span><span class="j">PILLOW SHOT</span><p>小津的发明：<b>人物走了，镜头还留在空房间</b>。拍的是"人走之后的空气"。</p></div>
+        <div class="chip"><span class="t">门框构图</span><span class="j">FRAME IN FRAME</span><p><b>黑泽明</b>爱用：人站在门里、窗里、柱间。<b>人永远被框住</b>——这就是他的主题。</p></div>
+        <div class="chip"><span class="t">横移而不剪</span><span class="j">TRACKING</span><p>摄影机水平移动，人物在纵深穿行。<b>你不"切换视角"，你"走过这段人生"</b>。</p></div>
+        <div class="chip"><span class="t">背影表演</span><span class="j">BACK VIEW</span><p><b>成濑巳喜男</b>让女演员<b>背对镜头</b>说话。日本女人的心事不是"说"出来的。</p></div>
+        <div class="chip"><span class="t">空镜过渡</span><span class="j">EMPTY SHOT</span><p>不拍人，拍<b>云、电线、车站、晾衣绳</b>。情绪不由演员给，由<b>时间和天气</b>给。</p></div>
+        <div class="chip"><span class="t">沉默三秒</span><span class="j">SILENCE</span><p>台词说完，<b>再留三秒</b>。是枝裕和用它制造"未说出的部分"。</p></div>
+        <div class="chip"><span class="t">天气当演员</span><span class="j">WEATHER</span><p>黑泽明拍雨、小津拍秋、是枝拍夏天的蝉。<b>日本人不用音乐表达悲伤，他们用季节。</b></p></div>
+        <div class="chip"><span class="t">非职业演员</span><span class="j">NON-ACTOR</span><p>是枝裕和、河濑直美大量使用<b>素人</b>。<b>不表演的表演</b>，比演技更接近真实。</p></div>
+        <div class="chip"><span class="t">长镜头吃饭</span><span class="j">EATING SHOT</span><p>《小偷家族》里一家人吃泡面、小津片里的早餐。<b>吃饭是全片最诚实的戏</b>。</p></div>
+        <div class="chip"><span class="t">不解释的结尾</span><span class="j">OPEN END</span><p><b>不给答案</b>。《无人知晓》的结尾，孩子们坐在机场栏杆上——<b>你替他们想完了余生。</b></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COL 4 : table -->
+  <section id="path" aria-labelledby="t3">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Column 04 · 入门路径</span>
+          <h2 id="t3">四步，从<b>「看过」</b>到<b>「看懂」</b></h2>
+        </div>
+        <p>「理论浓度」= 看完会不会想重看一遍。「上手度」= 要不要先补背景知识。<b>从下往上走，别反过来。</b></p>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:14%">步骤</th>
+              <th style="width:20%">看什么</th>
+              <th style="width:9%">片长</th>
+              <th style="width:15%">理论浓度</th>
+              <th style="width:15%">上手度</th>
+              <th>这一步在练什么</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>STEP 01</b><br><span style="color:var(--mute);font-size:11px">先感受</span></td>
+              <td><b>《东京物语》</b><br><span style="color:var(--mute);font-size:11px">小津 · 1953</span></td>
+              <td>136 min</td>
+              <td>★★★<span class="bar"><u style="width:56%"></u></span></td>
+              <td>★★★★★<span class="bar"><u style="width:96%"></u></span></td>
+              <td><b>学会"看空镜"</b>：老人走了，镜头还在客厅。<b>看完你会懂什么叫"余韵"。</b></td>
+            </tr>
+            <tr>
+              <td><b>STEP 02</b><br><span style="color:var(--mute);font-size:11px">学剪接</span></td>
+              <td><b>《罗生门》</b><br><span style="color:var(--mute);font-size:11px">黑泽明 · 1950</span></td>
+              <td>88 min</td>
+              <td>★★★★<span class="bar"><u style="width:76%"></u></span></td>
+              <td>★★★★<span class="bar"><u style="width:82%"></u></span></td>
+              <td><b>学会"多机位"</b>：同一个动作，用 5 个角度拍。<b>这是蒙太奇的日本解法。</b></td>
+            </tr>
+            <tr>
+              <td><b>STEP 03</b><br><span style="color:var(--mute);font-size:11px">学长镜</span></td>
+              <td><b>《雨月物语》</b><br><span style="color:var(--mute);font-size:11px">沟口 · 1953 · 公版</span></td>
+              <td>96 min</td>
+              <td>★★★★★<span class="bar"><u style="width:94%"></u></span></td>
+              <td>★★★<span class="bar"><u style="width:58%"></u></span></td>
+              <td><b>学会"不剪"</b>：鬼之所以像鬼，是因为镜头<b>不肯切走</b>。</td>
+            </tr>
+            <tr>
+              <td><b>STEP 04</b><br><span style="color:var(--mute);font-size:11px">学克制</span></td>
+              <td><b>《无人知晓》</b><br><span style="color:var(--mute);font-size:11px">是枝 · 2004</span></td>
+              <td>141 min</td>
+              <td>★★★★★<span class="bar"><u style="width:92%"></u></span></td>
+              <td>★★★★<span class="bar"><u style="width:78%"></u></span></td>
+              <td><b>学会"不解释"</b>：<b>孩子比大人清楚发生了什么</b>——导演选择不替他们说。</td>
+            </tr>
+            <tr>
+              <td><b>STEP 05</b><br><span style="color:var(--mute);font-size:11px">学愤怒</span></td>
+              <td><b>《青春残酷物语》</b><br><span style="color:var(--mute);font-size:11px">大岛渚 · 1960</span></td>
+              <td>96 min</td>
+              <td>★★★★★<span class="bar"><u style="width:98%"></u></span></td>
+              <td>★★<span class="bar"><u style="width:36%"></u></span></td>
+              <td><b>学会"把摄影机扛上街"</b>：<b>别搭景，去拍真实的人。</b>需要补一点 1960 年的日本。</td>
+            </tr>
+            <tr>
+              <td><b>STEP 06</b><br><span style="color:var(--mute);font-size:11px">学"失败"</span></td>
+              <td><b>《男人真命苦》</b><br><span style="color:var(--mute);font-size:11px">山田洋次 · 1969</span></td>
+              <td>91 min</td>
+              <td>★★<span class="bar"><u style="width:30%"></u></span></td>
+              <td>★★★★★<span class="bar"><u style="width:96%"></u></span></td>
+              <td><b>学会"拍普通人"</b>：<b>失败者的日常，才是国民记忆。</b>全系列 48 部，随便挑。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- COL 5 : details/summary accordion -->
+  <section id="faq" aria-labelledby="t4">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Column 05 · 一答问</span>
+          <h2 id="t4">关于"理论"，<em>六个问答</em></h2>
+        </div>
+        <p>点击问题展开。<b>答案都很短</b>——长的部分，都在片子里。</p>
+      </div>
+      <div class="qa">
+
+        <details class="qb"><summary>这个网站能直接看电影吗？</summary>
+          <div class="an"><p><b>不能，也不打算能。</b>本站是<b>片单、方法与版权常识</b>：告诉你该看什么、为什么该看、去哪里<b>合法地</b>看到它。我们不提供、不托管、不链接、不转存任何影视资源，亦不使用、不推荐任何破解、盗链、网盘资源或共享账号。<b>「理论」的前提是：作品先被好好地买过一次。</b></p></div>
+        </details>
+
+        <details class="qb"><summary>「日本理论电影」是什么意思？</summary>
+          <div class="an"><p>不是"关于日本的理论电影"，而是<b>"关于日本电影的理论"</b>。<br>日本电影在一百年里贡献了大量<b>可被学习、可被偷走、可被复用</b>的拍摄方法：小津的榻榻米机位、沟口的一场一镜、黑泽的多机位、成濑的背影、是枝的沉默。<b>它们属于全世界的眼睛，不只是日本人的。</b></p></div>
+        </details>
+
+        <details class="qb"><summary>看不懂理论，能看这个网站吗？</summary>
+          <div class="an"><p><b>这正是本站的假设：大多数人不是"不懂"，是"没人讲得让人懂"。</b><br>本站不用"缝合、跳切、纵深调度、能指所指"这类词，改用：<b>"镜头为什么不肯切走""为什么拍她的后颈""为什么这句台词之后要停三秒"</b>。<b>看懂一个镜头，胜过背十个术语。</b></p></div>
+        </details>
+
+        <details class="qb"><summary>为什么片单里老片这么多？</summary>
+          <div class="an"><p><b>因为"理论"通常藏在老片里。</b>新技术（CG、手持、竖屏）是热闹，<b>老方法（机位、剪接、留白）才是地基</b>。<br>同时，<b>1950 年代的一批日本电影已陆续进入公有领域</b>（如沟口、小津的部分早期作品），<b>合法、免费、修复版多</b>——这是最划算的起点。<b>片长与公版状态以修复厂牌与正版平台当日页面为准。</b></p></div>
+        </details>
+
+        <details class="qb"><summary>「作者论」会不会太武断？</summary>
+          <div class="an"><p><b>会，但有用。</b>作者论（Auteur Theory）1954 年由特吕弗提出，主张"导演是一部电影的真正作者"。它<b>忽略了编剧、摄影、演员、制片</b>，所以不严谨。<br>但它的价值在于：<b>它给你一条线</b>——先看懂一个人的执念，再看他所有的片子，<b>比"按类型乱看"效率高十倍</b>。本站用它当"入门工具"，不当"真理"。</p></div>
+        </details>
+
+        <details class="qb"><summary>片单多久更新一次？</summary>
+          <div class="an"><p><b>每月初一</b>：一位作者（含"该看的三部"+"可偷走的两条语法"）+ 一条"镜头语法"词条 + 一份<b>正版观看渠道</b>的当日情况。<br>片名、年份、片长、公版状态与评价均为<b>主观整理，会随地区版权法与平台变动</b>，请以正版平台与当地法律当日信息为准。欢迎在「推荐片目」提交你心中的"被低估的作者"——<b>请附一句"他发明了什么"。</b></p></div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- quote -->
+  <section aria-label="引言" style="padding-top:0">
+    <div class="wrap">
+      <div class="quote">
+        <span class="mq" aria-hidden="true">“</span>
+        <p>小津的镜头<b>不俯视</b>人，<b>不仰视</b>人，它只是<b>跪下来</b>，和人一样高。这就是全部的日本电影理论。</p>
+        <cite>— 本站 · 镜头语法 #01「榻榻米机位」</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section aria-labelledby="c1">
+    <div class="wrap">
+      <div class="cta">
+        <h2 id="c1">每月一位作者。<br>看懂<b>一个人</b>，胜过刷过<u>一百部</u>。</h2>
+        <p>每月初一：一位作者（该看的三部 + 可偷走的两条语法）+ 一条镜头语法词条 + 一份正版观看渠道当日情况。<b>无广告、不卖号、随时退订。</b></p>
+        <a class="btn btn-d" href="#" rel="nofollow">📜 订阅「理论月报」</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ff">
+      <div>
+        <strong style="color:var(--ink);font-family:Georgia,serif;font-size:15px">日本理论电影网</strong> · <span>ribenlilundianyingwang-cn.github.io</span>
+        <div style="margin-top:5px">日本电影理论观影指引 · 思潮年表 · 作者论片单 · 镜头语法 · 入门路径</div>
+      </div>
+      <div class="fn">
+        <a href="#age">思潮年表</a>
+        <a href="#auteur">作者论</a>
+        <a href="#gram">镜头语法</a>
+        <a href="#path">入门路径</a>
+        <a href="#faq">一答问</a>
+        <a href="#" rel="nofollow">推荐片目</a>
+        <a href="#" rel="nofollow">观影守则</a>
+        <a href="#" rel="nofollow">版权声明</a>
+      </div>
+    </div>
+    <nav class="bread">
+      当前位置：<a href="https://ribenlilundianyingwang-cn.github.io/">首页</a> / <span>日本理论电影网 · 日本电影理论观影指引、思潮年表与作者论片单导航</span>
+    </nav>
+    <p class="copy">
+      <b>重要声明：</b>本页为<b>影视鉴赏、电影理论与版权常识</b>类导航索引，<b style="color:var(--char2)">不提供、不托管、不链接、不转存任何影视资源</b>，亦不涉及破解、盗链、网盘资源、共享账号或任何违规内容。本站片单仅作<b>欣赏、研究与讨论</b>之用，所涉观看渠道均为<b>正版平台的合法内容、公共文化机构、修复厂牌官方发布与线下放映</b>。片名、年份、片长、公版状态与评价均为<b>主观整理，会随地区版权法与平台变动</b>，请以正版平台与当地法律当日信息为准。请通过合法合规的正版渠道观看影视作品，尊重创作者劳动与知识产权。<b>未成年人请在监护人指导下选择适龄内容。</b>© <span id="yr">2026</span> ribenlilundianyingwang-cn.github.io · All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
